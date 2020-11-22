@@ -19,7 +19,7 @@
     "authentication",
     "mongodb"
   ],
-  "author": "bezkoder",
+  "author": "Carreta",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

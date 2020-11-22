@@ -13,7 +13,7 @@
       novalidate
     >
       <div class="form-group">
-        <label for="username">Username</label>
+        <label for="username">Usuário</label>
         <input
           type="text"
           class="form-control"
@@ -25,17 +25,17 @@
           #username="ngModel"
         />
         <div class="alert-danger" *ngIf="f.submitted && username.invalid">
-          <div *ngIf="username.errors.required">Username is required</div>
+          <div *ngIf="username.errors.required">Um usuário é necessário.</div>
           <div *ngIf="username.errors.minlength">
-            Username must be at least 3 characters
+            Um usuário precisa ter pelo menos 3 caracteres.
           </div>
           <div *ngIf="username.errors.maxlength">
-            Username must be at most 20 characters
+            Um usuário pode ter até 20 caracteres.
           </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">E-mail</label>
         <input
           type="email"
           class="form-control"
@@ -46,14 +46,14 @@
           #email="ngModel"
         />
         <div class="alert-danger" *ngIf="f.submitted && email.invalid">
-          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.required">Um e-mail é requerido</div>
           <div *ngIf="email.errors.email">
-            Email must be a valid email address
+            O e-mail precisa ser válido.
           </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
+        <label for="password">Senha</label>
         <input
           type="password"
           class="form-control"
@@ -64,23 +64,26 @@
           #password="ngModel"
         />
         <div class="alert-danger" *ngIf="f.submitted && password.invalid">
-          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.required">Uma senha é requerida</div>
           <div *ngIf="password.errors.minlength">
-            Password must be at least 6 characters
+            A senha deve conter pelo menos 6 caracteres.
           </div>
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary btn-block">Sign Up</button>
+        <button class="btn btn-primary btn-block">Cadastre-se</button>
       </div>
 
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
-        Signup failed!<br />{{ errorMessage }}
+        O cadastro falhou.<br />{{ errorMessage }}
       </div>
     </form>
 
     <div class="alert alert-success" *ngIf="isSuccessful">
-      Your registration is successful!
+      Seu cadastro foi realizado com sucesso. 
+      <a mat-button color="primary" [routerLink]="['/login']">
+        Fazer Login
+      </a>
     </div>
   </div>
 </div>
