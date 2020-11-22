@@ -21,7 +21,8 @@
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+       <!--<a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>--> 
+       <button type="button" (click)="addLive()" class="btn btn-light">Novo Lembrete</button>
       </li>
       <li class="nav-item">
         <a href class="nav-link" (click)="logout()">Desconectar</a>

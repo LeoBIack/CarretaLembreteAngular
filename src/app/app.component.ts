@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { TokenStorageService } from "./_services/token-storage.service";
 import { Router } from "@angular/router";
+import { MatDialog } from '@angular/material/dialog';
+import { LembreteInserirComponent } from './lembretes/lembrete-inserir/lembrete-inserir.component';
 
 @Component({
   selector: "app-root",
@@ -14,7 +16,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private tokenStorageService: TokenStorageService,
-    private router: Router
+    private router: Router,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -35,4 +38,18 @@ export class AppComponent implements OnInit {
     this.tokenStorageService.signOut();
     window.location.reload();
   }
+
+  addLive(): void {
+    const dialogRef = this.dialog.open(LembreteInserirComponent, {
+      // maxHeight: '95vh',
+      minWidth: '400px',
+      // width: '25vw',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // window.location.reload();
+    });
+  }
+
 }

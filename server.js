@@ -26,11 +26,11 @@ db.mongoose
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log("Successfully connect to MongoDB.");
+    console.log("Conexão realizada com sucesso ao MongoDB.");
     initial();
   })
   .catch(err => {
-    console.error("Connection error", err);
+    console.error("Erro de conexão", err);
     process.exit();
   });
 
@@ -45,7 +45,7 @@ require("./app/routes/user.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`O servidor está conectado a porta ${PORT}.`);
 });
 
 function initial() {
