@@ -3,6 +3,13 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
 
+const http = require ('http');
+const app2 = require ('./backend/app2');
+app2.set('port', 3000);
+const server = http.createServer(app2);
+server.listen(3000);
+
+
 const app = express();
 
 var corsOptions = {
@@ -20,8 +27,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./app/models");
 const Role = db.role;
 
-db.mongoose
-  .connect('mongodb+srv://user:12345@cluster0.1zrgk.mongodb.net/app-mean?retryWrites=true&w=majority', {
+db.mongoose 
+  .connect('mongodb+srv://user:12345@cluster0.1zrgk.mongodb.net/desgraca?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })

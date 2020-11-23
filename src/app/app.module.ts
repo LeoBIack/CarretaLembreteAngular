@@ -12,6 +12,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { LembreteInserirComponent } from './lembretes/lembrete-inserir/lembrete-inserir.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LembreteListaComponent } from './lembretes/lembrete-lista/lembrete-lista.component'
 
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule } from '@angular/material/card';
@@ -37,6 +38,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ProfileComponent,
     BoardUserComponent,
     LembreteInserirComponent,
+    LembreteListaComponent,
   ],
   imports: [
     BrowserModule,

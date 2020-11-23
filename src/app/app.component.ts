@@ -3,6 +3,7 @@ import { TokenStorageService } from "./_services/token-storage.service";
 import { Router } from "@angular/router";
 import { MatDialog } from '@angular/material/dialog';
 import { LembreteInserirComponent } from './lembretes/lembrete-inserir/lembrete-inserir.component';
+import { Lembrete } from './lembretes/lembrete.model';
 
 @Component({
   selector: "app-root",
@@ -13,6 +14,11 @@ export class AppComponent implements OnInit {
   private roles: string[];
   isLoggedIn = false;
   username: string;
+
+  lembretes: Lembrete[] = [];
+  onLembreteAdicionado(lembrete) {
+    this.lembretes = [...this.lembretes, lembrete];
+  }
 
   constructor(
     private tokenStorageService: TokenStorageService,
