@@ -3,7 +3,7 @@
     <mat-expansion-panel *ngFor="let lembrete of lembretes">
   
       <mat-expansion-panel-header>Nome: {{ lembrete.nome }}</mat-expansion-panel-header>
-      <p>Data Prevista: {{ lembrete.dataPrevista }}</p>
+      <p>Data Prevista: {{ lembrete.previstaDate | date: 'dd/MM/y hh:mm:ss' }}</p>
       <hr />
   
       <!-- Criando uma linha de ações, com as opções de editar e remover o cliente: -->

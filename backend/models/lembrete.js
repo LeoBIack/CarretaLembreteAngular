@@ -9,7 +9,8 @@ const lembreteSchema = mongoose.Schema( {
    },
   dataPrevista: {
     type: String,
-    required: false,
+    required: true,
+    default: '0000/00/00'
   },
 
 } );

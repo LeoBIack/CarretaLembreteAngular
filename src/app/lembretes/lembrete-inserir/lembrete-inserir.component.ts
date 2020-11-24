@@ -39,7 +39,7 @@ export class LembreteInserirComponent implements OnInit {
       public route: ActivatedRoute
       ) { }
 
-
+      
   //@Output() clienteAdicionado = new EventEmitter<Cliente>();
   //nome: string;
   //fone: string;
@@ -78,3 +78,4 @@ export class LembreteInserirComponent implements OnInit {
     // this.clienteAdicionado.emit(cliente);
   }
 }
+

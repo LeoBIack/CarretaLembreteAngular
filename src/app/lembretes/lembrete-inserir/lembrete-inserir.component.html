@@ -66,10 +66,14 @@
         <mat-form-field>
           <mat-label>Data Prevista</mat-label>
           <input
+            type="text"
             required
+            lang="TP"
             name="previstaDate"
             matInput
             [matDatepicker]="picker"
+            #previstaDate="ngModel"
+            [ngModel]="lembrete?.previstaDate"
           />
           <mat-datepicker-toggle
             matSuffix
