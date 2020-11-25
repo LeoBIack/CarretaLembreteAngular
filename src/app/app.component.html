@@ -1,31 +1,31 @@
-<div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">Easy Lembretes</a>
+<div class="back" id="app">
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <a id="logo" href="/home" class="navbar-brand"></a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home">Home </a>
+       <!-- <a href="/home" class="nav-link" routerLink="home">Home </a>-->
       </li>
       <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">Lembretes</a>
+        <a id="bt4" href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user"> Meus Lembretes</a>
       </li>
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
       <li class="nav-item">
-        <a href="/register" class="nav-link" routerLink="register">Cadastre-se</a>
+        <a id="bt1" href="/register" class="nav-link" routerLink="register">Cadastre-se</a>
       </li>
       <li class="nav-item">
-        <a href="/login" class="nav-link" routerLink="login">Login</a>
+        <a id="bt2" href="/login" class="nav-link" routerLink="login">Login</a>
       </li>
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
        <!--<a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>--> 
-       <button type="button" (click)="addLive()" class="btn btn-light">Novo Lembrete</button>
+       <button id="bt3" type="button" (click)="addLive()" class="btn btn-light">+ Novo Lembrete</button>
       </li>
       <li class="nav-item">
-        <a href class="nav-link" (click)="logout()">Desconectar</a>
+        <a id="bt4" href class="nav-link" (click)="logout()">Desconectar</a>
       </li>
     </ul>
   </nav>

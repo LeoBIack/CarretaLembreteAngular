@@ -45,6 +45,7 @@ app2.get('/api/lembretes', (req, res, next) => {
 app2.post('/api/lembretes', (req, res, next) => {
   const lembrete = new Lembrete({
     nome: req.body.nome,
+    previstaDate: req.body.previstaDate,
   });
 
   lembrete.save()
@@ -69,6 +70,7 @@ app2.put("/api/lembretes/:id", (req, res, next) => {
   const lembrete = new Lembrete({
     _id: req.params.id,
     nome: req.body.nome,
+    previstaDate: req.body.previstaDate,
   });
 
   Lembrete.updateOne({

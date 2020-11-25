@@ -1,5 +1,6 @@
 // importar o pacote 'mongoose'
 const mongoose = require('mongoose');
+const { createFalse } = require('typescript');
 
 // Definir o esquema dos nossos dados
 const lembreteSchema = mongoose.Schema( {
@@ -7,10 +8,9 @@ const lembreteSchema = mongoose.Schema( {
     type: String,
     required: true
    },
-  dataPrevista: {
+  previstaDate: {
     type: String,
-    required: true,
-    default: '0000/00/00'
+    required: false,
   },
 
 } );
