@@ -1,49 +1,3 @@
-<!--<h1 mat-dialog-title>Nova Live</h1>
-<div mat-dialog-content>
-     <form class="example-form" [formGroup]="liveForm"> 
-    <form class="example-form" (submit)="onSalvarLembrete(lembreteForm)" #lembreteForm="ngForm">
-        <mat-form-field class="example-full-width">
-            <mat-label>Nome da Live</mat-label>
-            <input matInput placeholder="" formControlName="liveName" name="liveName">
-        </mat-form-field>
-      
-        <mat-form-field class="example-full-width">
-            <mat-label>Nome do Canal</mat-label>
-            <input matInput placeholder="" formControlName="channelName" name="channelName">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-            <mat-label>Link Completo</mat-label>
-            <input matInput placeholder="" formControlName="liveLink" name="liveLink">
-        </mat-form-field>
-
-        <div fxLayout="row wrap">
-        <div fxFlex="50" fxFill fxLayoutAlign="start center">
-            <mat-form-field>
-                <mat-label>Data da Live</mat-label>
-                <input matInput [matDatepicker]="picker" formControlName="liveDate">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-        </div>
-        <div fxFlex="50" fxFill fxLayoutAlign="start center">
-            <mat-form-field>
-                <mat-label>Horário da Live</mat-label>
-                <input matInput type="time" placeholder="" formControlName="liveTime" #time/>
-            </mat-form-field>
-        </div>
-        </div>
-    </form>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="cancel()">Cancelar</button>
-  <button mat-raised-button color="primary" (click)="createLive()">Adicionar</button> 
-  <button color="accent" mat-raised-button>
-    Salvar Cliente
-  </button>
-</div>
--->
-
 <mat-card>
 
     <form
@@ -52,15 +6,6 @@
       #lembreteForm="ngForm"
     >
     <mat-grid-list cols="2" rowHeight="2:1">
-
-      <!--<mat-expansion-panel hideToggle>
-            <mat-form-field class="example-full-width">
-                <mat-label>Lembrete</mat-label>
-                <input matInput #message maxlength="256" placeholder="Eu não posso esquecer de...">
-                <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
-                <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
-              </mat-form-field>
-          </mat-expansion-panel> -->
 
       <mat-grid-tile>
         <mat-form-field>

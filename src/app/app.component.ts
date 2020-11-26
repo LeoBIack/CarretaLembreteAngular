@@ -47,14 +47,11 @@ export class AppComponent implements OnInit {
 
   addLive(): void {
     const dialogRef = this.dialog.open(LembreteInserirComponent, {
-      // maxHeight: '95vh',
       minWidth: '400px',
-      // width: '25vw',
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      // window.location.reload();
     });
   }
 

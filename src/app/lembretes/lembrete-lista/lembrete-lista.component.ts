@@ -33,14 +33,9 @@ export class LembreteListaComponent
     });
   }
 
-  /**
-   * Método executado pelo Angular, quando
-   * este componente, ou instância desse componente,
-   * for removido e destruído
-   */
+
   ngOnDestroy(): void {
-    // Estamos removendo nossa inscrição para receber
-    // alertas das novidades do objeto observado:
+
     this.lembretesSubscription.unsubscribe();
   }
 

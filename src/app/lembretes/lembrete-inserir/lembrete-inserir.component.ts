@@ -1,4 +1,3 @@
-//import { Component, EventEmitter, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
@@ -40,18 +39,14 @@ export class LembreteInserirComponent implements OnInit {
       ) { }
 
       
-  //@Output() clienteAdicionado = new EventEmitter<Cliente>();
-  //nome: string;
-  //fone: string;
-  //email: string;
+
   onSalvarLembrete(form: NgForm) {
     if (form.invalid) return;
 
     if (this.modo === "criar") {
 
-      // Enviando os dados para o cliente service
       this.lembreteService.adicionarLembrete(
-        // Capturando os dados do formulário:
+   
         form.value.nome,
         form.value.previstaDate,
       );
@@ -67,15 +62,8 @@ export class LembreteInserirComponent implements OnInit {
     }
 
 
-    // Limpando os campos do formulário:
     form.resetForm();
 
-    // const cliente: Cliente = {
-    //   nome: form.value.nome,
-    //   fone: form.value.fone,
-    //   email: form.value.email,
-    // };
-    // this.clienteAdicionado.emit(cliente);
   }
 }
 
