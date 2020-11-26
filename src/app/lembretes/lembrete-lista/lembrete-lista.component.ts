@@ -12,6 +12,7 @@ import { Observable, Subscription } from 'rxjs';
 export class LembreteListaComponent
   implements OnInit, OnDestroy {
 
+    dateVal = new Date;
 
     lembretes: Lembrete[] = [];
   private lembretesSubscription: Subscription;
